@@ -13,17 +13,16 @@ public class Main {
         System.out.println("\nTask 1");
         int[] arr = generateRandomArray();
         int sum = 0;
-        for(int i=0;i< arr.length;i++)
-            sum = sum+arr[i];
+        for (int k : arr) sum = sum + k;
         System.out.println("Сумма трат за месяц составила "+ sum +" рублей");
         System.out.println("\nTask 2");
         int min = 300000;
         int max = -1;
-        for(int i=0;i< arr.length;i++){
-            if(arr[i]>max)
-                max = arr[i];
-            if(arr[i]<min)
-                min = arr[i];
+        for (int j : arr) {
+            if (j > max)
+                max = j;
+            if (j < min)
+                min = j;
         }
         System.out.println("Минимальная сумма трат за день составила "+ min+ " рублей.");
         System.out.println("Максимальная сумма трат за день составила "+ max+ " рублей.");
